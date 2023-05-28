@@ -21,7 +21,7 @@ plugin.tx_fpnewslettermodal_modal {
     }
 
     settings {
-        fpNewsletterCeUid = 314
+        fpNewsletterCeUid = 
     }
 }
 
