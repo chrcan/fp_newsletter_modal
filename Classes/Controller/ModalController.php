@@ -1,4 +1,5 @@
 <?php
+
 namespace Rcdesign\FpNewsletterModal\Controller;
 
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
@@ -7,7 +8,7 @@ use Psr\Http\Message\ResponseInterface;
 class ModalController extends ActionController
 {
     /**
-     * Displays a form for creating a new blog
+     * Displays a button for modalbox
      *
      * @return ResponseInterface
      */
@@ -20,7 +21,7 @@ class ModalController extends ActionController
         return $this->htmlResponse();
     }
     /**
-     * Displays a form for creating a new blog
+     * Displays a form into the modalbox
      *
      * @return ResponseInterface
      */
@@ -28,7 +29,8 @@ class ModalController extends ActionController
     {
         $this->view->assign(
             'contentObject',
-            $this->configurationManager->getContentObject()->data);
+            $this->configurationManager->getContentObject()->data
+        );
         // Debugg
         // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->configurationManager->getContentObject()->data);
         // die();
