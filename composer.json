@@ -1,0 +1,42 @@
+{
+    "name": "rcdesign/fp-newsletter-modal",
+    "type": "typo3-cms-extension",
+    "description": "Shows a fp_newsletter registration form in a modal",
+    "authors": [],
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "typo3/cms-core": "^11.5"
+    },
+    "require-dev": {
+        "typo3/testing-framework": "^6.9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rcdesign\\FpNewsletterModal\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rcdesign\\FpNewsletterModal\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "typo3-ter/fp-newsletter-modal": "self.version"
+    },
+    "config": {
+        "vendor-dir": ".Build/vendor",
+        "bin-dir": ".Build/bin"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "TYPO3\\TestingFramework\\Composer\\ExtensionTestEnvironment::prepare"
+        ]
+    },
+    "extra": {
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": ".Build/public",
+            "extension-key": "fp_newsletter_modal"
+        }
+    }
+}

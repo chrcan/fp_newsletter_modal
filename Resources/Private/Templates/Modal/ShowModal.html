@@ -1,0 +1,78 @@
+<!-- Modal -->
+
+<div class="modal fade" id="exampleModal{contentObject.pid}" tabindex="-1"
+    aria-labelledby="exampleModal{contentObject.pid}" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body text-muted">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h2>{f:translate(key:'label.headline')}</h2>
+                <f:cObject typoscriptObjectPath="lib.fpNewsletterModal.renderContent"
+                    data="{settings.fpNewsletterCeUid}" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Nur für Bootstrap 4 -->
+<f:asset.script identifier="fp_newsletter_modal{contentObject.pid}">
+    if ($("#exampleModal{contentObject.pid} .modal-body .tx-fp-newsletter form").length === 0 &&
+    window.location.pathname !== '/newsletterverivizierung.html') {
+    let myModal = $("#exampleModal{contentObject.pid}");
+    if (myModal.length) {
+    myModal.on('click', function() {
+    myModal.modal('show');
+    });
+    }
+    }
+</f:asset.script>
+
+<f:comment>
+    <f:asset.script identifier="fp_newsletter_modal{contentObject.pid}">
+        if ($("#exampleModal{contentObject.pid} .modal-body .tx-fp-newsletter form").length === 0) {
+        let myModal = $("#exampleModal{contentObject.pid}");
+        if (myModal.length) {
+        myModal.modal('show');
+        }
+        }
+    </f:asset.script>
+</f:comment>
+
+
+
+<f:comment>
+    <!-- Nur für Bootstrap 5 -->
+    <f:asset.script identifier="fp_newsletter_modal{contentObject.uid}">
+        if ($("#exampleModal{contentObject.uid} .modal-body .tx-fp-newsletter form").length == 0)
+        {
+        let myModal = bootstrap.Modal.getOrCreateInstance("#exampleModal{contentObject.uid}");
+
+        if (myModal) {
+        myModal.show();
+        }
+        }
+    </f:asset.script>
+
+    <!-- Nur für Bootstrap 4 -->
+    <f:asset.script identifier="fp_newsletter_modal{contentObject.uid}">
+        if ($("#exampleModal{contentObject.uid} .modal-body .tx-fp-newsletter form").length === 0) {
+        let myModal = $("#exampleModal{contentObject.uid}");
+        if (myModal.length) {
+        myModal.modal('show');
+        }
+        }
+    </f:asset.script>
+
+    <!-- Nur für Bootstrap 3 -->
+    <f:asset.script identifier="fp_newsletter_modal{contentObject.uid}">
+        if ($("#exampleModal{contentObject.uid} .modal-body .tx-fp-newsletter form").length == 0)
+        {
+        let myModal = $("#exampleModal{contentObject.uid}");
+        if (myModal) {
+        myModal.show();
+        }
+        }
+    </f:asset.script>
+</f:comment>

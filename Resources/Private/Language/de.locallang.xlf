@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2016-06-18T12:03:24Z"
+          product-name="fp_newsletter_modal" target-language="de">
+        <header/>
+        <body>
+            <trans-unit id="label.button">
+        		<source>Newsletter Subscribe</source>
+				<target>Newsletter Anmelden</target>
+      		</trans-unit>
+			<trans-unit id="label.headline">
+        		<source>Newsletter subscription</source>
+				<target>Newsletteranmeldung</target>
+      		</trans-unit>
+			<trans-unit id="tx_fp_newsletter_modal_link.description">
+        		<source>Button Link which calls up the modal box</source>
+				<target>Button Link der die Modalbox aufruft</target>
+      		</trans-unit>
+			<trans-unit id="tx_fp_newsletter_modal_link.name">
+				<source>Link ModalBox</source>
+				<target>Link ModalBox</target>
+			</trans-unit>
+			<trans-unit id="tx_fp_newsletter_modal_modalbox.description">
+        		<source>Modal box with fp_newsletter content</source>
+				<target>Modalbox mit fp_newsletter Innhalt</target>
+      		</trans-unit>
+			<trans-unit id="tx_fp_newsletter_modal_modalbox.name">
+				<source>ModalBox</source>
+				<target>ModalBox</target>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>
