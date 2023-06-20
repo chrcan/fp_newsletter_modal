@@ -1,14 +1,14 @@
-plugin.tx_fpnewslettermodal_modal {
+plugin.tx_fpnewslettermodal {
     view {
         templateRootPaths.0 = EXT:fp_newsletter_modal/Resources/Private/Templates/
-        templateRootPaths.1 = {$plugin.tx_fpnewslettermodal_modal.view.templateRootPath}
+        templateRootPaths.1 = {$plugin.tx_fpnewslettermodal.view.templateRootPath}
         partialRootPaths.0 = EXT:fp_newsletter_modal/Resources/Private/Partials/
-        partialRootPaths.1 = {$plugin.tx_fpnewslettermodal_modal.view.partialRootPath}
+        partialRootPaths.1 = {$plugin.tx_fpnewslettermodal.view.partialRootPath}
         layoutRootPaths.0 = EXT:fp_newsletter_modal/Resources/Private/Layouts/
-        layoutRootPaths.1 = {$plugin.tx_fpnewslettermodal_modal.view.layoutRootPath}
+        layoutRootPaths.1 = {$plugin.tx_fpnewslettermodal.view.layoutRootPath}
     }
     persistence {
-        storagePid = {$plugin.tx_fpnewslettermodal_modal.persistence.storagePid}
+        storagePid = {$plugin.tx_fpnewslettermodal.persistence.storagePid}
         #recursive = 1
     }
     features {
@@ -21,7 +21,13 @@ plugin.tx_fpnewslettermodal_modal {
     }
 
     settings {
-        fpNewsletterCeUid = 
+        fpNewsletterCeUid =
+    }
+}
+
+plugin.tx_fpnewslettermodal_button {
+    settings {
+        modalCeUid =
     }
 }
 
@@ -59,17 +65,17 @@ plugin.tx_fpnewslettermodal._CSS_DEFAULT_STYLE (
     }
 )
 
-
-lib.fpNewsletterModal.renderContent = RECORDS
-lib.fpNewsletterModal.renderContent {
-    tables = tt_content
-    source = TEXT
-    source.data = current
-    dontCheckPid = 1
-}
+// Funktioniert so leider nicht weis nicht weshalb...
 // lib.fpNewsletterModal.renderContent = RECORDS
 // lib.fpNewsletterModal.renderContent {
 //     tables = tt_content
-//     source = 314
+//     source = TEXT
+//     source.data = current
 //     dontCheckPid = 1
 // }
+lib.fpNewsletterModal.renderContent = RECORDS
+lib.fpNewsletterModal.renderContent {
+    tables = tt_content
+    source = 314
+    dontCheckPid = 1
+}

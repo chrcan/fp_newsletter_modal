@@ -2,16 +2,47 @@
 defined('TYPO3') || die();
 
 (static function() {
+
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
         'FpNewsletterModal',
-        'Link',
+        'Modal',
         [
-            \Rcdesign\FpNewsletterModal\Controller\ModalController::class => 'showLink'
+            \Rcdesign\FpNewsletterModal\Controller\ModalController::class => 'showModal'
         ],
         // non-cacheable actions
-        // [
-        //     \Rcdesign\FpNewsletterModal\Controller\ModalController::class => 'showLink'
-        // ]
+        [
+
+        ]
+    );
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+        'mod {
+            wizards.newContentElement.wizardItems.plugins {
+                elements {
+                    modal {
+                        iconIdentifier = fp_newsletter_modal-plugin-modal
+                        title = LLL:EXT:fp_newsletter_modal/Resources/Private/Language/locallang.xlf:tx_fp_newsletter_modal_modal.name
+                        description = LLL:EXT:fp_newsletter_modal/Resources/Private/Language/locallang.xlf:tx_fp_newsletter_modal_modal.description
+                        tt_content_defValues {
+                            CType = list
+                            list_type = fpnewslettermodal_modal
+                        }
+                    }
+                }
+                show = *
+            }
+        }'
+    );
+
+    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+        'FpNewsletterModal',
+        'Button',
+        [
+            \Rcdesign\FpNewsletterModal\Controller\ModalController::class => 'showButton'
+        ],
+        // non-cacheable actions
+        [
+
+        ]
     );
 
     // wizards
@@ -19,44 +50,13 @@ defined('TYPO3') || die();
         'mod {
             wizards.newContentElement.wizardItems.plugins {
                 elements {
-                    link {
-                        iconIdentifier = fp_newsletter_modal-plugin-link
-                        title = LLL:EXT:fp_newsletter_modal/Resources/Private/Language/locallang.xlf:tx_fp_newsletter_modal_link.name
-                        description = LLL:EXT:fp_newsletter_modal/Resources/Private/Language/locallang.xlf:tx_fp_newsletter_modal_link.description
+                    button {
+                        iconIdentifier = fp_newsletter_modal-plugin-button
+                        title = LLL:EXT:fp_newsletter_modal/Resources/Private/Language/locallang.xlf:tx_fp_newsletter_modal_button.name
+                        description = LLL:EXT:fp_newsletter_modal/Resources/Private/Language/locallang.xlf:tx_fp_newsletter_modal_button.description
                         tt_content_defValues {
                             CType = list
-                            list_type = fpnewslettermodal_link
-                        }
-                    }
-                }
-                show = *
-            }
-       }'
-    );
-
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'FpNewsletterModal',
-        'ModalBox',
-        [
-            \Rcdesign\FpNewsletterModal\Controller\ModalController::class => 'showModal'
-        ],
-        // non-cacheable actions
-        [
-            \Rcdesign\FpNewsletterModal\Controller\ModalController::class => 'showModal'
-        ]
-    );
-
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-        'mod {
-            wizards.newContentElement.wizardItems.plugins {
-                elements {
-                    modalbox {
-                        iconIdentifier = fp_newsletter_modal-plugin-modalbox
-                        title = LLL:EXT:fp_newsletter_modal/Resources/Private/Language/locallang.xlf:tx_fp_newsletter_modal_modalbox.name
-                        description = LLL:EXT:fp_newsletter_modal/Resources/Private/Language/locallang.xlf:tx_fp_newsletter_modal_modalbox.description
-                        tt_content_defValues {
-                            CType = list
-                            list_type = fpnewslettermodal_modalbox
+                            list_type = fpnewslettermodal_button
                         }
                     }
                 }

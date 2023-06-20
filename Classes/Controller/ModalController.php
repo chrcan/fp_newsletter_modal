@@ -8,32 +8,23 @@ use Psr\Http\Message\ResponseInterface;
 class ModalController extends ActionController
 {
     /**
-     * Displays a button for modalbox
+     * Display a button for fp_newsletter
      *
      * @return ResponseInterface
      */
-    public function showLinkAction(): ResponseInterface
+    public function showButtonAction(): ResponseInterface
     {
-        $this->view->assign(
-            'contentObject',
-            $this->configurationManager->getContentObject()->data
-        );
         return $this->htmlResponse();
     }
+
     /**
-     * Displays a form into the modalbox
+     * Display modal box for fp_newsletter
      *
      * @return ResponseInterface
      */
     public function showModalAction(): ResponseInterface
     {
-        $this->view->assign(
-            'contentObject',
-            $this->configurationManager->getContentObject()->data
-        );
-        // Debugg
-        // \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->configurationManager->getContentObject()->data);
-        // die();
+        $this->view->assign('contentObject', $this->configurationManager->getContentObject()->data);
         return $this->htmlResponse();
     }
 }

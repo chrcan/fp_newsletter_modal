@@ -1,4 +1,4 @@
-plugin.tx_fpnewslettermodal_modal {
+plugin.tx_fpnewslettermodal {
     view {
         # cat=plugin.tx_fpnewslettermodal_modal/file; type=string; label=Path to template root (FE)
         templateRootPath = EXT:fp_newsletter_modal/Resources/Private/Templates/

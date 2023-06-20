@@ -12,19 +12,19 @@
         		<source>Newsletter subscription</source>
 				<target>Newsletteranmeldung</target>
       		</trans-unit>
-			<trans-unit id="tx_fp_newsletter_modal_link.description">
+			<trans-unit id="tx_fp_newsletter_modal_button.description">
         		<source>Button Link which calls up the modal box</source>
 				<target>Button Link der die Modalbox aufruft</target>
       		</trans-unit>
-			<trans-unit id="tx_fp_newsletter_modal_link.name">
-				<source>Link ModalBox</source>
-				<target>Link ModalBox</target>
+			<trans-unit id="tx_fp_newsletter_modal_button.name">
+				<source>Button ModalBox</source>
+				<target>Button ModalBox</target>
 			</trans-unit>
-			<trans-unit id="tx_fp_newsletter_modal_modalbox.description">
+			<trans-unit id="tx_fp_newsletter_modal_modal.description">
         		<source>Modal box with fp_newsletter content</source>
 				<target>Modalbox mit fp_newsletter Innhalt</target>
       		</trans-unit>
-			<trans-unit id="tx_fp_newsletter_modal_modalbox.name">
+			<trans-unit id="tx_fp_newsletter_modal_modal.name">
 				<source>ModalBox</source>
 				<target>ModalBox</target>
 			</trans-unit>
