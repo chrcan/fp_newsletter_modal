@@ -9,16 +9,16 @@
 	<trans-unit id="label.headline">
 		<source>Newsletter subscription</source>
 	</trans-unit>
-	<trans-unit id="tx_fp_newsletter_modal_link.name">
+	<trans-unit id="tx_fp_newsletter_modal_button.name">
 		<source>Link ModalBox</source>
 	</trans-unit>
-	<trans-unit id="tx_fp_newsletter_modal_link.description">
+	<trans-unit id="tx_fp_newsletter_modal_button.description">
 		<source>Button Link which calls up the modal box</source>
 	</trans-unit>
-	<trans-unit id="tx_fp_newsletter_modal_modalbox.description">
+	<trans-unit id="tx_fp_newsletter_modal_modal.description">
 		<source>Modal box with fp_newsletter content</source>
 	</trans-unit>
-	<trans-unit id="tx_fp_newsletter_modal_modalbox.name">
+	<trans-unit id="tx_fp_newsletter_modal_modal.name">
 		<source>ModalBox</source>
 	</trans-unit>
     </body>
